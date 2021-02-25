@@ -1,0 +1,29 @@
+.Stock{
+    text-align: center;
+}
+.Stock_table{
+    margin: 30px auto;
+    width: 70%;
+    border:1px solid black;
+    table-layout: fixed;
+}
+
+.Stock_table tr,
+.Stock_table th,
+.Stock_table td{
+    border: 1px solid black;
+}
+.Stock_table td{
+    background-color: #cbd3da;
+    cursor: pointer;
+}
+.Stock_table th{background-color: #9fcdff}
+.Stock_table th[colspan]{background-color: #10c9c3}
+.Stock_button{
+    background-color: #006b00;
+    color: white;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}

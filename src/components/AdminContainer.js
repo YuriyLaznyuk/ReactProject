@@ -11,6 +11,7 @@ class AdminContainer extends Component {
             createProduct: false,
             createCustomer: false,
             createOrders: false,
+            createStock: false,
             products: [],
             customers: [],
             orders: [],
@@ -18,6 +19,7 @@ class AdminContainer extends Component {
             liIndex: '',
             customerIndex:'',
             orderIndex:'',
+            stockIndex: ''
 
         }
         this.onChangeAdminMenu = this.onChangeAdminMenu.bind(this)
@@ -128,6 +130,39 @@ onDeleteOrder=(index)=>{
 
 }
 
+// ==STOCK METHOD==
+onCreateStock=(stock,index)=>{
+    this.setState({
+        createStock:stock,
+        stockIndex:index
+    });
+}
+
+onPushNameStock=(items,index)=>{
+        let stockNew= this.state.stock;
+        if (index>=0){
+            stockNew[index]=items;
+            this.setState({
+                stock:stockNew,
+                createStock:false
+            });
+        }
+        else{
+            stockNew.push(items);
+            this.setState({
+                stock:stockNew,
+                createStock:false
+            });
+        }
+}
+onDeleteNameStock=(index)=>{
+  let stockNew=this.state.stock;
+  stockNew.splice(index,1);
+    this.setState({
+        stock:stockNew,
+        createStock:false
+    });
+}
     render() {
         console.log(this.state.products + " AdminContainer")
     console.log(this.state.customers)
@@ -143,15 +178,20 @@ onDeleteOrder=(index)=>{
                                <MyContext1.Provider value={
                                    {
                                        myCont:'это мой контекст',
+
                                        createOrders: this.state.createOrders,
                                        orders: this.state.orders,
                                        orderIndex: this.state.orderIndex,
-
                                        CreateOrder:this.onCreateOrder,
                                        PushNameOrder:this.onPushNameOrder,
                                        DeleteOrder:this.onDeleteOrder,
 
-
+                                       stock:this.state.stock,
+                                       createStock:this.state.createStock,
+                                       stockIndex: this.state.stockIndex,
+                                       CreateStock:this.onCreateStock,
+                                       PushNameStock:this.onPushNameStock,
+                                       DeleteStock:this.onDeleteNameStock
 
                                    }
                                }>
