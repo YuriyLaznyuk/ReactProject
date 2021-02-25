@@ -10,7 +10,7 @@ export function Stock(props) {
         let stock=context.stock.map((item,index)=>
             <tr key={index} onClick={()=>context.CreateStock(true,index)}>
               <td>{item.name}</td>
-              <td>{item.colls}</td>
+              <td>{item.cols}</td>
               <td>{item.stock}</td>
               <td>{item.price}</td>
 
