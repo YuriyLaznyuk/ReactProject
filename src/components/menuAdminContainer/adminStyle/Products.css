@@ -1,0 +1,34 @@
+.Products{
+    text-align: center;
+}
+.Products_table{
+    margin: 20px auto;
+    border: 1px solid;
+    width: 60%;
+    table-layout: fixed;
+}
+.Products_table  tr,
+.Products_table  th,
+.Products_table  td{
+    border: 1px solid;
+}
+
+.Products_table td{
+    cursor: pointer;
+    background-color: #cbd3da;
+}
+.th_head{
+    background-color: #00ccff;
+}
+.thead-tr th{
+    background-color: #9fcdff;
+}
+.btn-create{
+    cursor: pointer;
+    background-color: #34ce57;
+    border-radius: 20px;
+    border: #34ce57;
+    font-size: 18px;
+    padding: 5px;
+    outline: none;
+}

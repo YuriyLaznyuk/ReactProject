@@ -1,0 +1,38 @@
+.Customers{
+    text-align: center;
+}
+
+.table_Customers, th,tr,td{
+    border: 1px solid black;
+    table-layout: fixed;
+
+}
+.table_Customers{
+    margin: 20px auto;
+    width: 60%
+}
+.Customers th[colspan]{
+    background-color: #9fcdff;
+}
+.Customers th{
+    background-color: #00ccff;
+}
+.Customers td{
+    background-color: #cbd3da;
+    cursor: pointer;
+}
+
+.btn_Customers{
+    background-color: #0b2e13;
+    border: 1px solid #0b2e13 ;
+    color: white;
+    border-radius: 20px;
+    font-size: 18px;
+    font-weight: 600;
+    outline: none;
+    cursor: pointer;
+
+}
+.btn_Customers:hover{
+    color: #c82333;
+}

@@ -1,0 +1,21 @@
+.MainMenu_ul{
+    display: flex;
+    justify-content: space-around;
+    margin: 0;
+    padding: 0;
+}
+.MainMenu_ul>li{
+    list-style: none;
+    border: 1px solid;
+    padding: 5px 20px;
+    cursor: pointer;
+
+}
+.red{
+    background-color: #ff006a;
+
+}
+.blue{
+    background-color: #00ccff;
+
+}

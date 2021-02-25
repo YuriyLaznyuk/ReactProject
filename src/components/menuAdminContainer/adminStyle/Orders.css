@@ -1,0 +1,38 @@
+.Orders{
+    text-align: center;
+}
+
+.table_Orders, th,tr,td{
+    border: 1px solid black;
+    table-layout: fixed;
+
+}
+.table_Orders{
+    margin: 20px auto;
+    width: 60%
+}
+.Orders th[colspan]{
+    background-color: #9ffdff;
+}
+.Orders th{
+    background-color: #0088ff;
+}
+.Orders td{
+    background-color: #a3acb6;
+    cursor: pointer;
+}
+
+.btn_Orders{
+    background-color: #0b2e13;
+    border: 1px solid #0b2e13 ;
+    color: white;
+    border-radius: 20px;
+    font-size: 18px;
+    font-weight: 600;
+    outline: none;
+    cursor: pointer;
+
+}
+.btn_Orders:hover{
+    color: red;
+}
