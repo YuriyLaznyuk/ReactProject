@@ -8,7 +8,7 @@ export function Stock(props) {
             <h1>Stock</h1>
             <ul>
                 {props.stock.length ?
-                stock : 'NO STOCK'}
+                stock : 'NO STOCK STOCK'}
             </ul>
         </div>
     )
