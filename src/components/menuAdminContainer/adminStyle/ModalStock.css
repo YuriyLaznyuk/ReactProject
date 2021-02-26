@@ -23,8 +23,15 @@
     display: block;
     cursor: pointer;
 }
+.ModalStock input[type='text']{
+    outline: none;
+}
 .ModalStock_button{
     margin-top: 10px;
     display: flex;
     justify-content: space-between;
+}
+.ModalStock-valid_span{
+    color: red;
+    margin-left: 10px;
 }

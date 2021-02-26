@@ -40,10 +40,10 @@ let customObj=props.customers[props.customerIndex];
     console.log(customer)
     console.log(props.customerIndex)
 
- // если поле не редактировать при дефолтном значении
-        if(customObj&&!customer.name){customer.name=customObj.name}
-        if(customObj&&!customer.tel){customer.tel=customObj.tel}
-        if(customObj&&!customer.email){customer.email=customObj.email}
+ // костыль если поле не редактировать при дефолтном значении
+        if(customObj&&!customer.name){setName(customObj.name)}
+        if(customObj&&!customer.tel){setTel(customObj.tel)}
+        if(customObj&&!customer.email){setEmail(customObj.email)}
 
 
 
