@@ -21,7 +21,7 @@ useEffect(()=>{
     setNameValid(/^[a-zA-z][a-z]{2,10}$/.test(name));
     setQuantityValid(/^[1-9][0-9]{0,5}$/.test(quantity));
     setSaleValid(/^[1-9][0-9]?[%]$/.test(sale));
-    setPriceValid(/^([1-9][0-9]{0,5}[.]?([0-9]|[1-9])[0-9])|[1-9]$/.test(price));
+    setPriceValid(/(^[1-9][0-9]{0,5}[.]?([0-9]|[1-9])[0-9]$)|(^[1-9][0-9]{0,5}$)/.test(price));
     setFormValid(nameValid&&quantityValid&&saleValid&&priceValid);
 })
 
