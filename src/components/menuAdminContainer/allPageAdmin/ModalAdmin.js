@@ -67,6 +67,8 @@ onValidForm=()=>{
 
 
     render() {
+
+        // костыль
         let items='';
         if (this.props.liIndex>=0){
          items = this.props.products[this.props.liIndex];
@@ -76,14 +78,24 @@ onValidForm=()=>{
 
 
         if (items && !this.product.name) {
-            this.product.name = items.name;
+            this.product.name = items['name'];
+            this.setState({nameValid:items['name'].length>=3,
+            name:items['name'],
+            formValid:true});
         }
         if (items && !this.product.unit) {
-            this.product.unit = items.unit;
+            this.product.unit = items['unit'];
+            this.setState({unitValid:items['unit'].length>=3,
+            unit:items['unit'],
+                formValid:true});
         }
 
         if (items && !this.product.price) {
-            this.product.price = items.price;
+            this.product.price = items['price'];
+            this.setState({priceValid:items['price'].length>=3,
+                    price:items['price'],
+                    formValid:true}
+                );
         }
 
 
@@ -98,7 +110,7 @@ onValidForm=()=>{
                            style={{opacity:(this.validStyle('name','nameValid'))?1:0}}>Field Name invalid</span>}
                     <input className='ModalAdmin_text' type="text" id='name' name='name'
                            style={{border:this.validStyle('name','nameValid') && '2px solid red'}}
-                           defaultValue={items ? items.name : ''}
+                           defaultValue={items ? items['name'] : ''}
                            onChange={(e) => this.onValueChange(e)}
 
                     />
@@ -110,7 +122,7 @@ onValidForm=()=>{
                            style={{opacity:(this.validStyle('unit','unitValid'))?1:0}}>Field Unit invalid</span>}
                     <input className='ModalAdmin_text' type="text" id='unit' name='unit'
                            style={{border:this.validStyle('unit','unitValid') && '2px solid red'}}
-                           defaultValue={items ? items.unit : ''}
+                           defaultValue={items ? items['unit'] : ''}
                            onChange={e => this.onValueChange(e)}/>
                     <br/>
 
@@ -119,7 +131,7 @@ onValidForm=()=>{
                            style={{opacity:(this.validStyle('price','priceValid'))?1:0}}>Field Price invalid</span>}
                     <input className='ModalAdmin_text' type="text" id='price' name='price'
                            style={{border:(this.validStyle('price','priceValid')) && '2px solid red'}}
-                           defaultValue={items ? items.price : ''}
+                           defaultValue={items ? items['price']: ''}
                            onChange={e => this.onValueChange(e)}
                     />
 

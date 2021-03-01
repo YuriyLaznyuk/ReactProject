@@ -1,0 +1,37 @@
+.ModalStock{
+    width: 100%;
+    height: 100%;
+    background-color: #b3b7bb;
+    z-index: 100;
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.ModalStock label{
+    cursor: pointer;
+}
+.ModalStock{
+    display: flex;
+    flex-direction: column;
+
+}
+.ModalStock input{
+    display: block;
+    cursor: pointer;
+}
+.ModalStock input[type='text']{
+    outline: none;
+}
+.ModalStock_button{
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+.ModalStock-valid_span{
+    color: red;
+    margin-left: 10px;
+}

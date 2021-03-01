@@ -30,9 +30,9 @@ let[formValid, setFormValid]=useState(false)
 
     })
     // костыль
-    if(items&&!order.name){order.name=items.name}
-    if(items&&!order.cols){order.cols=items.cols}
-    if(items&&!order.price){order.price=items.price}
+    if(items&&!order.name){order.name=items.name;setName(items.name)}
+    if(items&&!order.cols){setQuantity(items.cols)}
+    if(items&&!order.price){setPrice(items.price)}
 
     return (
         <div className='ModalOrders'>
