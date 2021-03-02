@@ -3,6 +3,9 @@ import './MainMenu.css';
 import {Link, Route, useRouteMatch, Switch} from 'react-router-dom';
 import AdminContainer from "./AdminContainer";
 import UserContainer from "./UserContainer";
+import Login from "./privateRouteLogin/Login";
+import PrivateRoute from "./privateRouteLogin/PrivateRoute";
+
 
 
 export function MainMenu(props) {
@@ -15,8 +18,8 @@ export function MainMenu(props) {
                     </Link>
                 </li>
 
-                <li className={useRouteMatch("/usercontainer") ? 'red' : 'blue'}>
-                    <Link to='/usercontainer'>
+                <li className={useRouteMatch("/usecontainer") ? 'red' : 'blue'}>
+                    <Link to='/usecontainer'>
                         UserContainer
                     </Link>
                 </li>
@@ -37,10 +40,11 @@ export function MainMenu(props) {
             </ul>
 
             <Switch>
-                <Route exact path='/admin'><AdminContainer/></Route>
-                <Route path='/usercontainer'><UserContainer/></Route>
+                <Route exact path='/usecontainer'><UserContainer/></Route>
                 <Route path='/container1'><h1>Container 1</h1></Route>
                 <Route path='/container2'><h1>Container 2</h1></Route>
+                <Route path="/login"><Login/></Route>
+                <PrivateRoute path="/admin" component={AdminContainer} />
 
             </Switch>
         </div>
