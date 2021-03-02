@@ -1,0 +1,19 @@
+.Login {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+}
+
+.Login input, .Login label{
+    display: block;
+    width: 200px;
+    margin: 5px;
+    cursor: pointer;
+}
+.Login__span{
+    color: red;
+}
+.Login__p{
+    font-weight: 600;
+}

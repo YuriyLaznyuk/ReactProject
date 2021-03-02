@@ -20,7 +20,7 @@
 .ModalCreate input, .ModalCreate label{
     cursor: pointer;
 }
-    input[type='text']{
+ .ModalCreate  input[type='text']{
         display: block;
         width: 200px;
         height: 18px;
