@@ -6,8 +6,6 @@ import UserContainer from "./UserContainer";
 import Login from "./privateRouteLogin/Login";
 import PrivateRoute from "./privateRouteLogin/PrivateRoute";
 
-
-
 export function MainMenu(props) {
     return (
         <div>
@@ -44,10 +42,10 @@ export function MainMenu(props) {
                 <Route path='/container1'><h1>Container 1</h1></Route>
                 <Route path='/container2'><h1>Container 2</h1></Route>
                 <Route path="/login"><Login/></Route>
-                <PrivateRoute path="/admin" component={AdminContainer} />
+                <PrivateRoute path="/admin" component={AdminContainer}/>
 
             </Switch>
         </div>
-    )
+    );
 
 }

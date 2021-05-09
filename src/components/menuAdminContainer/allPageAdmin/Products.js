@@ -1,12 +1,10 @@
-import React,{useContext} from 'react';
+import React from 'react';
 import ModalAdmin from "./ModalAdmin";
 import '../adminStyle/Products.css'
-import {MyContext1} from "./oneContext";
 
 
 export function Products(props) {
     let productsLength=props.products.length
-    let context=useContext(MyContext1)
     console.log(props.productslS)
   let product=props.products.map((item,index)=>
   <tr key={index} onClick={()=>props.onCreateProduct(true,index)}>
